@@ -15,3 +15,7 @@ scipy
 
 
 we used https://www.kaggle.com/datasets/vatsalmavani/spotify-dataset
+
+
+MIGHT BE USEFUL:
+https://www.kaggle.com/datasets/andrewmvd/spotify-playlists/code
