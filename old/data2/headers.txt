@@ -1,0 +1,18 @@
+['name', 'album', 'artist', 'id', 'release_date', 'popularity', 'length', 'danceability', 'acousticness', 'energy', 'instrumentalness', 'liveness', 'valence', 'loudness', 'speechiness', 'tempo', 'key', 'time_signature', 'mood']
+['1999', '1999', 'Prince', '2H7PHVdQ3mXqEHXcvclTB0', '1982-10-27', '68', '379266', '0.866', '0.13699999999999998', '0.73', '0.0', '0.0843', '0.625', '-8.201', '0.0767', '118.523', '5', '4', 'Happy']
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

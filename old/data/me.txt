@@ -1,0 +1,18 @@
+dancability, energy, speed.
+
+data.csv:
+['valence', 'year', 'acousticness', 'artists', 'danceability', 'duration_ms', 'energy', 'explicit', 'id', 'instrumentalness', 'key', 'liveness', 'loudness', 'mode', 'name', 'popularity', 'release_date', 'speechiness', 'tempo']
+['0.0594', '1921', '0.982', "['Sergei Rachmaninoff', 'James Levine', 'Berliner Philharmoniker']", '0.279', '831667', '0.211', '0', '4BJqT0PrAfrxzMOxytFOIz', '0.878', '10', '0.665', '-20.096', '1', 'Piano Concerto No. 3 in D Minor, Op. 30: III. Finale. Alla breve', '4', '1921', '0.0366', '80.954']
+
+
+
+
+
+1. See if we already have the title in the database by doing 
+
+name, duration_ms, instrumentalness, loudness, artists, danceability?,energy?popularity?
+
+
+k-means
+
+linear regression
