@@ -5,6 +5,8 @@ from sklearn.decomposition import PCA
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+import matplotlib.patheffects as pe
+import os
 
 data = pd.read_csv("data.csv")
 song_cluster_pipeline = Pipeline([("scaler", StandardScaler()), ("kmeans", KMeans(n_clusters=20, verbose=False))], verbose=False)
@@ -20,15 +22,39 @@ projection = pd.DataFrame(columns=["x", "y"], data=song_embedding)
 projection["title"] = data["name"]
 projection["cluster"] = data["cluster_label"]
 
+
+plt.style.use("dark_background")
 plt.figure(figsize=(10, 6))
 cmap = "inferno"
 dot_size = 20
 scatter = plt.scatter(projection["x"], projection["y"], c=projection["cluster"], cmap=cmap, s=dot_size)
-specific_point = {"x": 3.0, "y": 3.0, "cluster": 1}  # Replace with your specific data
-plt.scatter(specific_point["x"], specific_point["y"], c="black", s=300, marker="X")
-plt.xlabel("x")
-plt.ylabel("y")
-plt.title("Scatter Plot")
-cbar = plt.colorbar(scatter, label=f"Cluster ({cmap})")
+
+##NEW
+XHead = X.head(3)
+outputPlotPoints = pca_pipeline.fit_transform(XHead)
+outputPlotPoints
+##NEW
+myData = data.head(len(XHead))
+
+for i, plotPoint in enumerate(outputPlotPoints):
+    plt.scatter(plotPoint[0], plotPoint[1], c="yellow", s=300, marker="X")
+    # XHead.index[i]
+    dataI = myData.iloc[i]
+    dataI = dict(dataI)
+    # print(dataI)
+    songName = dataI["name"]
+    # truncate songName
+    songName = songName[:10]
+    plt.text(plotPoint[0], plotPoint[1], songName, color="#430000", fontsize=8, ha="center", va="center", path_effects=[pe.withStroke(linewidth=2, foreground="yellow")])
+
+
+# cbar = plt.colorbar(scatter, label=f"Cluster ({cmap})")
+
+
 # plt.show()
-plt.savefig(f"kNearestSkLearn{cmap}2.png")
+imageName = f"kNearestSkLearn{cmap}tig5.png"
+plt.axis("off")
+plt.tight_layout()
+plt.savefig(imageName, bbox_inches="tight", transparent=True)
+# plt.savefig(imageName)
+os.startfile(imageName)

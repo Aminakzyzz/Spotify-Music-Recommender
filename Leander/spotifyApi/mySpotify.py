@@ -76,4 +76,4 @@ def searchSong(toSearch):
 
 if __name__ == "__main__":
     out = searchSong("Lucid Dreams")
-    print(out.json())
+    print(out)

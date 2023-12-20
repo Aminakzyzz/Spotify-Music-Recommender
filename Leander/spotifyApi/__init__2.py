@@ -22,11 +22,6 @@ class MyGUI(QWidget):
         self.input_text = QLineEdit(self)
         layout.addWidget(self.input_text)
 
-        self.table_widget = QTableWidget(self)
-        self.table_widget.setColumnCount(4)  # Columns: Song, Artist, Explicit, Danceability
-        self.table_widget.setHorizontalHeaderLabels(["Song", "Artist", "Explicit", "Danceability"])
-        layout.addWidget(self.table_widget)
-
         self.explicit_checkbox = QCheckBox("Explicit Songs", self)
         layout.addWidget(self.explicit_checkbox)
 
@@ -35,6 +30,11 @@ class MyGUI(QWidget):
         self.danceability_slider.setValue(50)
         layout.addWidget(QLabel("Danceability", self))
         layout.addWidget(self.danceability_slider)
+
+        self.table_widget = QTableWidget(self)
+        self.table_widget.setColumnCount(4)  # Columns: Song, Artist, Explicit, Danceability
+        self.table_widget.setHorizontalHeaderLabels(["Song", "Artist", "Explicit", "Danceability"])
+        layout.addWidget(self.table_widget)
 
         self.submit_button = QPushButton("Submit", self)
         self.submit_button.clicked.connect(self.on_submit)
