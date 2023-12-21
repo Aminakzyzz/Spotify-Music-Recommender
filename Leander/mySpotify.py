@@ -156,9 +156,9 @@ def searchSong(toSearch):
     dataToReturn["artist"] = song["artists"][0]["name"]
     dataToReturn["album"] = song["album"]["name"]
     dataToReturn["popularity"] = song["popularity"]
-    dataToReturn["explicit"] = song["explicit"]
+    dataToReturn["explicit"] = 1 if song["explicit"] else 0
     dataToReturn["duration_ms"] = song["duration_ms"]
-    dataToReturn["year"] = song["album"]["release_date"][:4]
+    dataToReturn["year"] = int(song["album"]["release_date"][:4])
 
     id = song["id"]
     audioFeatures = getAudioFeatures(id)
