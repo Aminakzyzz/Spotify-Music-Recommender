@@ -33,7 +33,7 @@ class mainWindow(QWidget):
         self.widgets_setup()
 
         # calling the function to load the png image
-        self.load_png(self)
+        self.load_png()
 
     def widgets_setup(self):
         self.setObjectName("self")
@@ -105,6 +105,8 @@ class mainWindow(QWidget):
         self.settings.setObjectName("settings")
         self.settings.setStyleSheet("font-weight: bold;")
 
+
+
         #  SLIDER DANCEABILITY
         self.slider_danceability = QtWidgets.QSlider(parent=self)
         self.slider_danceability.setGeometry(QtCore.QRect(250, 220, 160, 16))
@@ -135,6 +137,7 @@ class mainWindow(QWidget):
         self.tempo_value = QtWidgets.QLabel(parent=self)
         self.slider_tempo.valueChanged.connect(self.updateTempo)
         # setting default value to 0
+        # self.slider_tempo.setMaximum(245)
         self.slider_tempo.setValue(50)
         self.slider_tempo.setStyleSheet("QSlider::handle:horizontal { background: #1DB954; }")
 
@@ -202,9 +205,9 @@ class mainWindow(QWidget):
         # self.more_button.setText("More")
         # self.submit_button.setText("Submit")
 
-    def load_png(self, label):
+    def load_png(self):
         # Loading the png image
-        pixmap = QPixmap("images/kNearestSkLearninfernotig5.png")
+        pixmap = QPixmap("plot.png")
 
         # placing the image in the label
         if pixmap.isNull():
@@ -274,8 +277,36 @@ class mainWindow(QWidget):
 
         for dictCount, dictData in enumerate(dictDatas):
             dictData = dict(dictData)
-
             print(dictData)
+
+            danceabilityPercent = dictData["danceability"] * 100
+            tempoPercent = dictData["tempo"] / 245 * 100
+            popularityPercent = dictData["popularity"]
+            energyPercent = dictData["energy"] * 100
+
+            self.slider_danceability.setValue(danceabilityPercent)
+            self.slider_tempo.setValue(tempoPercent)
+            self.slider_popularity.setValue(popularityPercent)
+            self.slider_energy.setValue(energyPercent)
+
+            # elif key == "danceability":
+            #     data = round((data), 2)
+            #     self.slider_danceability.setValue(data)
+            # elif key == "tempo":
+            #     data = round((data), 2)
+            #     self.slider_tempo.setValue(data)
+            # elif key == "popularity":
+            #     data = round((data), 2)
+            #     self.slider_popularity.setValue(data)
+            # elif key == "energy":
+            #     data = round((data), 2)
+            #     self.slider_energy.setValue(data)
+
+            # danceability 0 - 1
+            # tempo 0 - 243.507
+            # popularity 0 - 100
+            # energy 0 - 1
+
             for index, key in enumerate(lables):
                 data = dictData[key]
                 print(key, type(data), data)
@@ -291,11 +322,13 @@ class mainWindow(QWidget):
                 elif key == "speechiness":
                     data = round((data), 2)
 
-                print(key, type(data), data)
+                # print(key, type(data), data)
 
                 widgetItem = QTableWidgetItem(str(data))
 
                 self.tableWidget.setItem(dictCount, index, widgetItem)
+
+                self.load_png()
 
     def check_browser(self):
         # check if the browser text is empty
@@ -325,5 +358,8 @@ if __name__ == "__main__":
     print("[Started]")
     app = QApplication(sys.argv)
     window = mainWindow()
+    window.setWindowFlags(QtCore.Qt.WindowType.WindowStaysOnTopHint)
     window.show()
+    # focus
+    window.activateWindow()
     sys.exit(app.exec())
