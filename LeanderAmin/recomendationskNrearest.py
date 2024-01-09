@@ -20,6 +20,7 @@ kn.fit(XScaled)
 songAttributesToDrop = ["artist", "name", "album", "time_signature"]
 
 
+# danceibilityValue, tempoValue, popularityValue, energyValue
 def getRecomendations(songNameInput):  # , songsCountToReturn=10):
     orderedSongData = {}
     songData = searchSong(songNameInput)

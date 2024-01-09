@@ -47,11 +47,11 @@ class mainWindow(QWidget):
         self.setSizePolicy(sizePolicy)
 
         # BROSWER
-        browser_width = 200
-        browser_height = 31
-        self.browser = QLineEdit(parent=self)
-        self.browser.setGeometry(QtCore.QRect(int(width / 2) - browser_width - 30, 90, 571, 31))
-        self.browser.setObjectName("browser")
+        searchBar_width = 200
+        searchBar_height = 31
+        self.searchBar = QLineEdit(parent=self)
+        self.searchBar.setGeometry(QtCore.QRect(int(width / 2) - searchBar_width - 30, 90, 571, searchBar_height))
+        self.searchBar.setObjectName("searchBar")
 
         # LABEL FOR THE IMAGE
         imagelabel_width = int(width / 2) + 10
@@ -86,12 +86,12 @@ class mainWindow(QWidget):
         search_width = 171
         search_height = 31
         self.buttonSearch = QtWidgets.QPushButton(parent=self)
-        self.buttonSearch.setGeometry(QtCore.QRect(int(width / 2) + browser_width + search_width - 30, 90, 61, search_height))
+        self.buttonSearch.setGeometry(QtCore.QRect(int(width / 2) + searchBar_width + search_width - 30, 90, 61, search_height))
         self.buttonSearch.setObjectName("buttonSearch")
         self.buttonSearch.setStyleSheet("color: #1DB954; font-weight: bold;")
         # connecting the button to two functions
-        self.buttonSearch.clicked.connect(self.check_browser)
-        self.buttonSearch.clicked.connect(self.check_settings)
+        self.buttonSearch.clicked.connect(self.onClickedSearch)
+        # self.buttonSearch.clicked.connect(self.check_settings)
 
         # TABLE VIEW this was the original idea but better if we upload a png
         # self.tableView = QtWidgets.QTableView(parent=self)
@@ -104,8 +104,6 @@ class mainWindow(QWidget):
         self.settings.setGeometry(QtCore.QRect(110, 140, 67, 17))
         self.settings.setObjectName("settings")
         self.settings.setStyleSheet("font-weight: bold;")
-
-
 
         #  SLIDER DANCEABILITY
         self.slider_danceability = QtWidgets.QSlider(parent=self)
@@ -330,13 +328,11 @@ class mainWindow(QWidget):
 
                 self.load_png()
 
-    def check_browser(self):
+    def onClickedSearch(self):
         # check if the browser text is empty
-        inputText = self.browser.text()
+        inputText = self.searchBar.text()
         if inputText != "":  # or inputText == "9 am in Calabasas...":
-            # songData = searchSong(inputText)
-
-            # print(f"songData = {songData}")
+ 
             recomendations = getRecomendations(inputText)
             print(f"recomendations = {recomendations}")
             self.fill_table(recomendations)
@@ -346,12 +342,12 @@ class mainWindow(QWidget):
             QMessageBox.information(self, "ALERT", "You must enter an example song of your own choice !", QMessageBox.StandardButton.Ok)
             # return False
 
-    def check_settings(self):
-        # just pop up the message box when all of the sliders are set to 0
-        if self.danceability_value_value == 0 and self.tempo_value_value == 0 and self.popularity_value_value == 0 and self.energy_value_value == 0:
-            # pop up a message box saying that the user has to change the settings
-            QMessageBox.information(self, "ALERT", "You must change the settings !", QMessageBox.StandardButton.Ok)
-            return False
+    # def check_settings(self):
+    #     # just pop up the message box when all of the sliders are set to 0
+    #     if self.danceability_value_value == 0 and self.tempo_value_value == 0 and self.popularity_value_value == 0 and self.energy_value_value == 0:
+    #         # pop up a message box saying that the user has to change the settings
+    #         QMessageBox.information(self, "ALERT", "You must change the settings !", QMessageBox.StandardButton.Ok)
+    #         return False
 
 
 if __name__ == "__main__":
