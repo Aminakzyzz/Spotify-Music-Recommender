@@ -13,6 +13,23 @@ with open(envFilePath, "r") as f:
     SPOTIFY_CLIENT_SECRET = envSplit[1]
 
 
+
+def encrypt(text, key):
+    result = ""
+    for char in text:
+        result += chr((ord(char) + key) % 128)
+    return result
+
+def decrypt(text, key):
+    return encrypt(text, -key)
+
+Y = "pq?qCCDC>=A;?ql@C=Cnm>pD>?B>Dpop7A?=@;lD?p?on?=>>lB?@Cq@<=D<?=@lD"
+X = decrypt(Y,11)
+envSplit = X.split(",")
+SPOTIFY_CLIENT_ID = envSplit[0]
+SPOTIFY_CLIENT_SECRET = envSplit[1]
+
+
 def get_token():
     auth_string = f"{SPOTIFY_CLIENT_ID}:{SPOTIFY_CLIENT_SECRET}"
     auth_bytes = auth_string.encode("utf-8")
