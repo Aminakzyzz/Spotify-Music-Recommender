@@ -54,7 +54,7 @@ class mainWindow(QWidget):
         searchBar_width = 200
         searchBar_height = 31
         self.searchBar = QLineEdit(parent=self)
-        self.searchBar.setGeometry(QtCore.QRect(int(width / 2) - searchBar_width - 30, 90, 571, searchBar_height))
+        self.searchBar.setGeometry(QtCore.QRect(int(width / 2) - searchBar_width - 50, 90, 571, searchBar_height))
         self.searchBar.setObjectName("searchBar")
 
         # LABEL FOR THE IMAGE
@@ -68,7 +68,7 @@ class mainWindow(QWidget):
         Title_width = 100
         Title_height = 41
         self.Title = QtWidgets.QLabel(parent=self)
-        self.Title.setGeometry(QtCore.QRect(int(width / 2) - (Title_width + 70), 30, 500, Title_height))
+        self.Title.setGeometry(QtCore.QRect(int(width / 2) - (Title_width + 90), 30, 500, Title_height))
         self.Title.setStyleSheet('font: 75 18pt "MS Shell Dlg 2"; color: #1DB954; font-weight: bold;')
         self.Title.setObjectName("Title")
         # sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Fixed, QtWidgets.QSizePolicy.Policy.Fixed)
@@ -83,7 +83,7 @@ class mainWindow(QWidget):
         label_width = 91
         label_height = 28
         self.lable1 = QtWidgets.QLabel(parent=self)
-        self.lable1.setGeometry(QtCore.QRect(420, 90, label_width, label_height))
+        self.lable1.setGeometry(QtCore.QRect(400, 90, label_width, label_height))
         self.lable1.setObjectName("label1")
 
         BUTTON_WIDTH = 150
@@ -92,7 +92,7 @@ class mainWindow(QWidget):
         search_width = 171
         search_height = 31
         self.buttonSearch = QtWidgets.QPushButton(parent=self)
-        self.buttonSearch.setGeometry(QtCore.QRect(int(width / 2) + searchBar_width + search_width - 30, 90, BUTTON_WIDTH, search_height))
+        self.buttonSearch.setGeometry(QtCore.QRect(int(width / 2) + searchBar_width + search_width - 50, 90, BUTTON_WIDTH, search_height))
         self.buttonSearch.setObjectName("buttonSearch")
         self.buttonSearch.setStyleSheet("color: #1DB954; font-weight: bold;")
 
@@ -101,28 +101,24 @@ class mainWindow(QWidget):
         # self.buttonSearch.clicked.connect(self.check_settings)
 
         # RECOMEND BUTTON
-        # search_width = 171
-        # search_height = 31
-        # recommendButton_width = 150
         self.recommendButton = QtWidgets.QPushButton(parent=self)
-        self.recommendButton.setGeometry(QtCore.QRect(int(width / 2) + searchBar_width + search_width + 200, 200, BUTTON_WIDTH, search_height))
-        self.recommendButton.setObjectName("buttonSearch")
+        self.recommendButton.setGeometry(QtCore.QRect(int(width / 2) + searchBar_width + search_width + 170, 200, BUTTON_WIDTH, search_height))
+        self.recommendButton.setObjectName("buttonRecommend")
         self.recommendButton.setStyleSheet("color: #1DB954; font-weight: bold;")
-        # self.recommendButton.setStyleSheet("background-color: #1DB954; color: #F0FFFF; font-weight: bold;")
-        # chang button background color
-        # self.recommendButton.setStyleSheet("background-color: #1DB954; color: #1DB954; font-weight: bold;")
+
         # connecting the button to two functions
+        self.recommendButton.clicked.connect(self.timeAlert)
         self.recommendButton.clicked.connect(self.onClickRecommend)
 
         # SETTINGS LABEL
         self.settings = QtWidgets.QLabel(parent=self)
-        self.settings.setGeometry(QtCore.QRect(110, 140, 67, 17))
+        self.settings.setGeometry(QtCore.QRect(80, 140, 67, 17))
         self.settings.setObjectName("settings")
         self.settings.setStyleSheet("font-weight: bold;")
 
         #  SLIDER DANCEABILITY
         self.slider_danceability = QtWidgets.QSlider(parent=self)
-        self.slider_danceability.setGeometry(QtCore.QRect(250, 220, 160, 16))
+        self.slider_danceability.setGeometry(QtCore.QRect(180, 220, 160, 16))
         self.slider_danceability.setOrientation(QtCore.Qt.Orientation.Horizontal)
         self.slider_danceability.setObjectName("slider_danceability")
         self.danceability_value = QtWidgets.QLabel(parent=self)
@@ -134,17 +130,17 @@ class mainWindow(QWidget):
 
         # LABEL DANCEABILITY
         self.danceability = QtWidgets.QLabel(parent=self)
-        self.danceability.setGeometry(QtCore.QRect(250, 190, 100, 17))
+        self.danceability.setGeometry(QtCore.QRect(180, 190, 100, 17))
         self.danceability.setObjectName("danceability")
 
         # TEMPO LABEL
         self.tempo = QtWidgets.QLabel(parent=self)
-        self.tempo.setGeometry(QtCore.QRect(550, 190, 67, 17))
+        self.tempo.setGeometry(QtCore.QRect(480, 190, 67, 17))
         self.tempo.setObjectName("tempo")
 
         # SLIDER TEMPO
         self.slider_tempo = QtWidgets.QSlider(parent=self)
-        self.slider_tempo.setGeometry(QtCore.QRect(550, 220, 160, 16))
+        self.slider_tempo.setGeometry(QtCore.QRect(480, 220, 160, 16))
         self.slider_tempo.setOrientation(QtCore.Qt.Orientation.Horizontal)
         self.slider_tempo.setObjectName("slider_tempo")
         self.tempo_value = QtWidgets.QLabel(parent=self)
@@ -156,12 +152,12 @@ class mainWindow(QWidget):
 
         # POPULARITY LABEL
         self.popularity = QtWidgets.QLabel(parent=self)
-        self.popularity.setGeometry(QtCore.QRect(850, 190, 81, 17))
+        self.popularity.setGeometry(QtCore.QRect(780, 190, 81, 17))
         self.popularity.setObjectName("popularity")
 
         # SLIDER POPULARITY
         self.slider_popularity = QtWidgets.QSlider(parent=self)
-        self.slider_popularity.setGeometry(QtCore.QRect(850, 220, 160, 16))
+        self.slider_popularity.setGeometry(QtCore.QRect(780, 220, 160, 16))
         self.slider_popularity.setOrientation(QtCore.Qt.Orientation.Horizontal)
         self.slider_popularity.setObjectName("slider_popularity")
         self.popularity_value = QtWidgets.QLabel(parent=self)
@@ -171,12 +167,12 @@ class mainWindow(QWidget):
 
         # ENERGY LABEL
         self.energy = QtWidgets.QLabel(parent=self)
-        self.energy.setGeometry(QtCore.QRect(1150, 190, 67, 17))
+        self.energy.setGeometry(QtCore.QRect(1080, 190, 67, 17))
         self.energy.setObjectName("energy")
 
         # SLIDER ENERGY
         self.slider_energy = QtWidgets.QSlider(parent=self)
-        self.slider_energy.setGeometry(QtCore.QRect(1150, 220, 160, 16))
+        self.slider_energy.setGeometry(QtCore.QRect(1080, 220, 160, 16))
         self.slider_energy.setOrientation(QtCore.Qt.Orientation.Horizontal)
         self.slider_energy.setObjectName("slider_energy")
         self.energy_value = QtWidgets.QLabel(parent=self)
@@ -245,7 +241,7 @@ class mainWindow(QWidget):
 
         # Position the text next to the danceability label
         label_width = 91  # Adjust this value based on your label's width
-        self.danceability_value.setGeometry(QtCore.QRect(290 + label_width + 10, 190, 50, 17))
+        self.danceability_value.setGeometry(QtCore.QRect(230 + label_width, 190, 50, 17))
 
         # Save the slider value in a variable (e.g., self.danceability_value)
         self.danceability_value_value = value  # Update the variable name if needed
@@ -255,7 +251,7 @@ class mainWindow(QWidget):
         self.tempo_value.setText(f"{value}")
         label_width = 91
 
-        self.tempo_value.setGeometry(QtCore.QRect(590 + label_width + 10, 190, 50, 17))
+        self.tempo_value.setGeometry(QtCore.QRect(530 + label_width, 190, 50, 17))
 
         self.tempo_value_value = value
 
@@ -264,14 +260,14 @@ class mainWindow(QWidget):
         label_width = 91
 
         # 800, 190, 81, 17
-        self.popularity_value.setGeometry(QtCore.QRect(890 + label_width + 10, 190, 50, 17))
+        self.popularity_value.setGeometry(QtCore.QRect(830 + label_width, 190, 50, 17))
         self.popularity_value_value = value
 
     def updateEnergy(self, value):
         self.energy_value.setText(f"{value}")
         label_width = 91
 
-        self.energy_value.setGeometry(QtCore.QRect(1190 + label_width + 10, 190, 50, 17))
+        self.energy_value.setGeometry(QtCore.QRect(1130 + label_width, 190, 50, 17))
         self.energy_value_value = value
 
     def fill_table(self, dictDatas, hasDistance=False):
@@ -383,6 +379,12 @@ class mainWindow(QWidget):
         self.fill_table(recomendations, True)
         self.load_png()
 
+    def timeAlert(self):
+
+        # the button is connected to the function but now trigger it.
+        QMessageBox.information(self, "ALERT", "This process will take some seconds, please be patient", QMessageBox.StandardButton.Ok)
+        return
+            
 
 if __name__ == "__main__":
     print("[Started]")
