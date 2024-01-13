@@ -340,6 +340,12 @@ class mainWindow(QWidget):
         tempoPercent = self.searchedSongData["tempo"] / 245 * 100
         popularityPercent = self.searchedSongData["popularity"]
         energyPercent = self.searchedSongData["energy"] * 100
+
+        danceabilityPercent = int(danceabilityPercent)
+        tempoPercent = int(tempoPercent)
+        popularityPercent = int(popularityPercent)
+        energyPercent = int(energyPercent)
+
         self.slider_danceability.setValue(danceabilityPercent)
         self.slider_tempo.setValue(tempoPercent)
         self.slider_popularity.setValue(popularityPercent)
