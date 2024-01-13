@@ -5,12 +5,12 @@ import os
 
 pathOfFile = os.path.dirname(os.path.abspath(__file__))
 
-envFilePath = os.path.join(pathOfFile, ".env")
-with open(envFilePath, "r") as f:
-    envText = f.read()
-    envSplit = envText.split(",")
-    SPOTIFY_CLIENT_ID = envSplit[0]
-    SPOTIFY_CLIENT_SECRET = envSplit[1]
+# envFilePath = os.path.join(pathOfFile, ".env")
+# with open(envFilePath, "r") as f:
+#     envText = f.read()
+#     envSplit = envText.split(",")
+#     SPOTIFY_CLIENT_ID = envSplit[0]
+#     SPOTIFY_CLIENT_SECRET = envSplit[1]
 
 
 

@@ -3,10 +3,4 @@ pandas
 matplotlib
 numpy
 scikit-learn
-
 requests
-
-
-Preprocessing/
-
-?yellowbrick for FeatureCorrelation
