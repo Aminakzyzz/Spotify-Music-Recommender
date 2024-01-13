@@ -1,24 +1,36 @@
 # assistance-systems-recommendation-system
 
-python -m venv musicRecommenderVenv
-
-pip install -r requirements.txt
-	
-//if want to use jupyter
-pip install jupyter
-
-//maybe use 
-seaborn
-plotly
-scipy
-
-
-
 we used https://www.kaggle.com/datasets/vatsalmavani/spotify-dataset
 
+Installation
 
-MIGHT BE USEFUL:
-https://www.kaggle.com/datasets/andrewmvd/spotify-playlists/code
+Ubuntu/Linux:
+python3 -m venv ./venv
+source ./venv/bin/activate
+pip install -r requirements.txt 
 
-EXAMPLE PROJECT:
-https://mygit.th-deg.de/ugarmann/sas-ws-22-23
+
+Basic Usage
+
+python main.py
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+///
+
+
+Windows:
+python -m venv musicRecommenderVenv
+pip install -r requirements.txt
