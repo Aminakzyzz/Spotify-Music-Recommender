@@ -2,3 +2,5 @@ musicRecommenderVenv/
 .env
 
 _CleanUp
+
+plotOld_*
