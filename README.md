@@ -13,7 +13,6 @@ link to my git repository still
 This application serves as a personalized musing recommender using the Spotify API. Users input an input song and adjust some parameters through sliders to tailor the recommendations to their own preferences. The application generates a list of 10 recommended songs, presenting aswell detailed information in a table layout. A visual representation of the input song and the recommendations is displayed though a plot. The layout enhances user experience and provides a user-friendly interface for discovering new music.
 
 
-
 # Installation
 
 git clone https://mygit.th-deg.de/lz24349/assistance-systems-recommendation-system.git
@@ -30,20 +29,6 @@ git clone https://mygit.th-deg.de/lz24349/assistance-systems-recommendation-syst
 1. python -m venv musicRecommenderVenv
 2. windowsVenv\Scripts\activate.bat
 3. pip install -r requirements.txt
-
-
-# Requirements
-
-This are the libraries saved in the "requirements.txt":
-
-- PyQt6
-- pandas
-- matplotlib
-- numpy
-- scikit-learn
-- requests
-
-This was tested in python versions 3.12.1 and 3.9.0
 
 # Basic Usage
 
@@ -80,3 +65,15 @@ The application is composed of other four files:
 
 - recomandationskNrearest.py implements k-nearest neighbors algorithm to privide recomendations for similar songs to the given one in the input, based on specified parameters.
 
+**Requirements**
+
+This are the libraries saved in the "requirements.txt":
+
+- PyQt6
+- pandas
+- matplotlib
+- numpy
+- scikit-learn
+- requests
+
+This was tested in python versions 3.12.1 and 3.9.0
