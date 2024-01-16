@@ -18,14 +18,15 @@ This PyQt6-based desktop application serves as a personalized music recommender 
 **Ubuntu/Linux:**
 
 1. python3 -m venv ./venv
-1. source ./venv/bin/activate
-1. pip install -r requirements.txt 
+2. source ./venv/bin/activate
+3. pip install -r requirements.txt 
 
 
 **Windows:**
 
 1. python -m venv musicRecommenderVenv
-1. pip install -r requirements.txt
+2. windowsVenv\Scripts\activate.bat
+3. pip install -r requirements.txt
 
 
 # Requirements
