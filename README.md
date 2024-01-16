@@ -13,12 +13,14 @@ This PyQt6-based desktop application serves as a personalized music recommender 
 
 # Installation
 
-Ubuntu/Linux:
+**Ubuntu/Linux:**
+
 python3 -m venv ./venv
 source ./venv/bin/activate
 pip install -r requirements.txt 
 
-Windows:
+**Windows:**
+
 python -m venv musicRecommenderVenv
 pip install -r requirements.txt
 
@@ -26,18 +28,18 @@ pip install -r requirements.txt
 
 This are the libraries saved in the requirements.txt
 
-PyQt6
-pandas
-matplotlib
-numpy
-scikit-learn
-requests
+- PyQt6
+- pandas
+- matplotlib
+- numpy
+- scikit-learn
+- requests
 
 This was tested in python versions 3.12.1 and 3.9.0
 
 # Basic Usage
 
-How to start the chatbot after installation is complete (typically with `rasa run` and `rasa shell`)
+How to start the chatbot after installation is complete ()
 
 Example of a typical conversation
 
