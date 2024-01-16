@@ -52,6 +52,18 @@ Leander Ziehm:
 
 Both: 7) General Python Programming.
 
+# requirements
+
+This are the libraries saved in the "requirements.txt":
+
+- PyQt6
+- pandas
+- matplotlib
+- numpy
+- scikit-learn
+- requests
+
+This was tested in python versions 3.12.1 and 3.9.0
 
 # Additional Descriptions
 
@@ -64,16 +76,3 @@ The application is composed of other four files:
 - plotManager.py generates the plot shown in the user interface.
 
 - recomandationskNrearest.py implements k-nearest neighbors algorithm to privide recomendations for similar songs to the given one in the input, based on specified parameters.
-
-**Requirements**
-
-This are the libraries saved in the "requirements.txt":
-
-- PyQt6
-- pandas
-- matplotlib
-- numpy
-- scikit-learn
-- requests
-
-This was tested in python versions 3.12.1 and 3.9.0
