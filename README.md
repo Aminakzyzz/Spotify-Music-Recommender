@@ -16,6 +16,8 @@ This application serves as a personalized musing recommender using the Spotify A
 
 # Installation
 
+git clone https://mygit.th-deg.de/lz24349/assistance-systems-recommendation-system.git
+
 **Ubuntu/Linux:**
 
 1. python3 -m venv ./venv

@@ -5,12 +5,6 @@ import os
 
 pathOfFile = os.path.dirname(os.path.abspath(__file__))
 
-# envFilePath = os.path.join(pathOfFile, ".env")
-# with open(envFilePath, "r") as f:
-#     envText = f.read()
-#     envSplit = envText.split(",")
-#     SPOTIFY_CLIENT_ID = envSplit[0]
-#     SPOTIFY_CLIENT_SECRET = envSplit[1]
 
 
 
@@ -74,17 +68,8 @@ def searchSongMetadata(toSearch):
 
 
 def searchSong(toSearch):
-    # print("WWWWWWWWWWWWWWW")
     songMetaData = searchSongMetadata(toSearch)
     dataToReturn = {}
-    print("-------------------")
-    print(songMetaData)
-    print(songMetaData)
-    print(songMetaData)
-    print(songMetaData)
-    print(songMetaData)
-    print("-------------------")
-    # print(songMetaData.keys())
     song = songMetaData["tracks"]["items"][0]
     dataToReturn["name"] = song["name"]
     dataToReturn["artist"] = song["artists"][0]["name"]

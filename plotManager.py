@@ -13,7 +13,6 @@ def plotSongData(XScaled, songDatasScaled, songNames, originalSearchedSongName):
     song_cluster_pipeline = Pipeline([("scaler", StandardScaler()), ("kmeans", KMeans(n_clusters=20, verbose=False))], verbose=False)
     song_cluster_pipeline.fit(XScaled)
     song_cluster_labels = song_cluster_pipeline.predict(XScaled)
-    print(type(XScaled))
 
     pca_pipeline = Pipeline([("scaler", StandardScaler()), ("PCA", PCA(n_components=2))])
     song_embedding = pca_pipeline.fit_transform(XScaled)
@@ -26,7 +25,6 @@ def plotSongData(XScaled, songDatasScaled, songNames, originalSearchedSongName):
     outputPlotPoints = pca_pipeline.fit_transform(songDatasScaled)
     outputPlotPoints
 
-    # originalSearchedSongName
 
     for i, plotPoint in enumerate(outputPlotPoints):
         plt.scatter(plotPoint[0], plotPoint[1], c="yellow", s=300, marker="X")
@@ -47,4 +45,3 @@ def plotSongData(XScaled, songDatasScaled, songNames, originalSearchedSongName):
     plt.axis("off")
     plt.tight_layout()
     plt.savefig(imageName, bbox_inches="tight", transparent=True)
-    # os.startfile(imageName)
