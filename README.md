@@ -5,6 +5,7 @@ Ziehm, Leander, 22201349
 Akziz, Amin, 22207319
 
 
+
 Spotify Music Recommender
 
 # Project description
@@ -16,14 +17,16 @@ This PyQt6-based desktop application serves as a personalized music recommender 
 
 **Ubuntu/Linux:**
 
-python3 -m venv ./venv
-source ./venv/bin/activate
-pip install -r requirements.txt 
+1. python3 -m venv ./venv
+1. source ./venv/bin/activate
+1. pip install -r requirements.txt 
+
 
 **Windows:**
 
-python -m venv musicRecommenderVenv
-pip install -r requirements.txt
+1. python -m venv musicRecommenderVenv
+1. pip install -r requirements.txt
+
 
 # Requirements
 
@@ -50,16 +53,15 @@ Example of a typical conversation
 # Work done
 
 Amin Akziz:
-1) Graphical User Interface
-2) Pandas with Numpy
+1. Graphical User Interface
+2. Pandas with Numpy
 
 Leander Ziehm:
-3) Visualization
-4) Scikit-Learn
+3. Visualization
+4. Scikit-Learn
 
 Both: 7) General Python Programming.
 
-2**
 
 # Additional Descriptions
 
