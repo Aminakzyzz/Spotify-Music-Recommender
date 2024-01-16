@@ -44,9 +44,11 @@ This was tested in python versions 3.12.1 and 3.9.0
 
 # Basic Usage
 
-How to start the chatbot after installation is complete ()
-
-Example of a typical conversation
+To launch the application, run "python main.py".
+Start giving an input seed song and press the button "Get Song Data". 
+Once the song data loads, adjust the parameters "Danceability, Tempo, Popularity and Energy" using the provided sliders.
+Subsequently after pressing the "Recommend" button, wait for some seconds and explore the recommended songs displayed in the table, accompanied by detailed information.
+Visualize the relationship between the seed song and recommendations in the plot.
 
 # Implementation of the Requests
 
