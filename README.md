@@ -32,7 +32,7 @@ This application serves as a personalized musing recommender using the Spotify A
 
 # Requirements
 
-This are the libraries saved in the requirements.txt
+This are the libraries saved in the "requirements.txt":
 
 - PyQt6
 - pandas
@@ -74,7 +74,7 @@ The application is composed of other four files:
 
 - mySpotify.py interacts with the spotify api to search and retrieve the song metadata to update the sliders.
 
-- plotManager.py generates the plot shown in the user interface
+- plotManager.py generates the plot shown in the user interface.
 
-- recomandationskNrearest.py implements k-nearest neighbors algorithm to privide recomendations for similar songs to the given one in the input, based on specified parameters
+- recomandationskNrearest.py implements k-nearest neighbors algorithm to privide recomendations for similar songs to the given one in the input, based on specified parameters.
 
