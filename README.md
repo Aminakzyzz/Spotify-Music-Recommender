@@ -10,7 +10,8 @@ Spotify Music Recommender
 
 # Project description
 
-This PyQt6-based desktop application serves as a personalized music recommender using the Spotify API. Users input an input song and adjust parameters through sliders to tailor recommendations to their preferences. The application generates a list of 10 recommended songs, presenting detailed information in a tabular layout. A visual representation of the input song and recommendations is displayed through an interactive plot. The unique layout enhances user experience, providing a user-friendly and intuitive interface for discovering new music.
+This application serves as a personalized musing recommender using the Spotify API. Users input an input song and adjust some parameters through sliders to tailor the recommendations to their own preferences. The application generates a list of 10 recommended songs, presenting aswell detailed information in a table layout. A visual representation of the input song and the recommendations is displayed though a plot. The layout enhances user experience and provides a user-friendly interface for discovering new music.
+
 
 
 # Installation
