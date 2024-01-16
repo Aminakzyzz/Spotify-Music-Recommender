@@ -53,10 +53,12 @@ Example of a typical conversation
 # Work done
 
 Amin Akziz:
+
 1. Graphical User Interface
 2. Pandas with Numpy
 
 Leander Ziehm:
+
 3. Visualization
 4. Scikit-Learn
 
