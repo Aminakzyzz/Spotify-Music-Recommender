@@ -10,7 +10,7 @@ Spotify Music Recommender
 
 # Project description
 
-This PyQt6-based desktop application serves as a personalized music recommender using the Spotify API. Users input a seed song and adjust parameters through sliders to tailor recommendations to their preferences. The application generates a list of 10 recommended songs, presenting detailed information in a tabular layout. A visual representation of the seed song and recommendations is displayed through an interactive plot. The unique layout enhances user experience, providing a user-friendly and intuitive interface for discovering new music.
+This PyQt6-based desktop application serves as a personalized music recommender using the Spotify API. Users input an input song and adjust parameters through sliders to tailor recommendations to their preferences. The application generates a list of 10 recommended songs, presenting detailed information in a tabular layout. A visual representation of the input song and recommendations is displayed through an interactive plot. The unique layout enhances user experience, providing a user-friendly and intuitive interface for discovering new music.
 
 
 # Installation
@@ -45,13 +45,10 @@ This was tested in python versions 3.12.1 and 3.9.0
 # Basic Usage
 
 To launch the application, run "python main.py".
-Start giving an input seed song and press the button "Get Song Data". 
+Start giving an input song and press the button "Get Song Data". 
 Once the song data loads, adjust the parameters "Danceability, Tempo, Popularity and Energy" using the provided sliders.
 Subsequently after pressing the "Recommend" button, wait for some seconds and explore the recommended songs displayed in the table, accompanied by detailed information.
-Visualize the relationship between the seed song and recommendations in the plot.
-
-# Implementation of the Requests
-
+Visualize the relationship between the input song and recommendations in the plot.
 
 # Work done
 
