@@ -4,9 +4,9 @@ Ziehm, Leander, 22201349
 
 Akziz, Amin, 22207319
 
-
-
 Spotify Music Recommender
+
+link to my git repository still
 
 # Project description
 
