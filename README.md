@@ -58,30 +58,15 @@ Visualize the relationship between the input song and recommendations in the plo
 
 # Implementation of the Requests
 
-!!!!!!!!! TODO: It describes what part of the code implements a request of the project.!!!!!!!!!
+At first, we searched for a data source on Kaggle and found a Spotify Song Dataset. 
 
-Part 02 Requests
-Create a PyQt6 application that implements the following requests:
-• A Desktop App with PyQT6 has to be developed.
-• A requirements.txt file must be used to list the used Python modules.
-• A README.md file must be created with the structure described in part 01.
-• The module venv must be used.
-• A free data source must be used. You may find it for example at Kaggle, SciKit (but not the built-in
-ones), or other.
-• There must be a data import (predefined format and content of CSV).
-• The data must be read from a file after clicking on a (menu) button or directly after starting the app.
-• The data must be analyzed with Pandas methods, so that a user gets on overview.
-• You may use the functions dataframe.info(), dataframe.describe() and/or dataframe.corr()
-for that.
-• You may also use other metrics or diagrams to do this.
-• Create several input widgets (at least 3, where 2 must be different) that change some feature variables.
-• A Scikit training model algorithm (e.g. from Aurélien Géron, Chapter 4) must be applied.
-• Create 1 or 2 output canvas, i.e. for data visualization
-• At least 3 statistical metrics over the input data must be shown
-• The app must react interactively to the change of input parameter with a new prediction with visual-
-ization.
+We downloaded it and implemented the data loading directly after the user executes the main.py file. The actual csv data loading logic is contain, loaded recomendationskNrearest.py script, which gets triggered as it is imported in main.py.
 
+We analyzed our dataset using Pandas functions like dataframe.info(), dataframe.describe() and dataframe.corr(). The output can be also be found on the wiki on GitLab.
 
+After analyzing we chose to use K-nearest neighbors instead of linear regression due to the amount of loosely connected data in the data set. To still get a well-informed and useful recommendation to the user, we retrieve metadata about songs the user searches for using the Spotify Api in the mySpotify.py script. We use this data in combination with the dataset to train and fit the scikit algorithm to the data using K-nearest neighbors. The output from this training and recommendation, we plot a diagram in the plotManager.py script to show a visual representation of the data and its distances to the user. This diagram gets then visualized in our application. Additionally, the user also gets the distances of each recommeded song compared to the originally searched song. 
+
+After that, we developed a desktop application using python and PyQT6. The user can search using the two three widgets: search bar represented by QLineEdit, multiple sliders represented by QSlider, and two buttons represented by QPushButton. Our app interactivly reacts to the user's input, firstly by adjusting the slider values automatically after a user searched for a song and metadata got retrieved from the Spotify Api. The second way our ui changes is after each recommendation diagram changes and new data gets filled in the output table represented by a QTableWidget.
 
 
 

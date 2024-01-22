@@ -304,7 +304,7 @@ class mainWindow(QWidget):
         timer = QTimer(self)
         timer.setSingleShot(True)
         timer.timeout.connect(self.onClickRecommend)
-        timer.start(1)  # Immediate timeout
+        timer.start(5)  # Immediate timeout
 
         # self.update()
         # input("+++++++++++++++++++")
