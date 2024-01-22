@@ -9,6 +9,11 @@ K_NEIGHBORS = 10
 attributesToDrop = ["id", "artists", "name", "release_date"]
 
 data = pd.read_csv("data.csv")
+
+# print(data.info())
+# print(data.describe())
+# print(data.corr())
+
 standardScaler = StandardScaler()
 XRaw = data.drop(attributesToDrop, axis=1, inplace=False)
 XHeaders = list(XRaw.keys())

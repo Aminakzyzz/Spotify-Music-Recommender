@@ -1,17 +1,33 @@
-# assistance-systems-recommendation-system
-
 Ziehm, Leander, 22201349
 
 Akziz, Amin, 22207319
 
 Spotify Music Recommender
 
-link to my git repository still
+https://mygit.th-deg.de/lz24349/assistance-systems-recommendation-system
+
+
+!!!!!!!!!!!! TODO PUT ACTUAL INFORMATION ON THE WIKI SO IT"S NOT SO EMPTY!!!!!!!!!!!!
+
+https://mygit.th-deg.de/lz24349/assistance-systems-recommendation-system/-/wikis/home
 
 # Project description
 
 This application serves as a personalized musing recommender using the Spotify API. Users input an input song and adjust some parameters through sliders to tailor the recommendations to their own preferences. The application generates a list of 10 recommended songs, presenting aswell detailed information in a table layout. A visual representation of the input song and the recommendations is displayed though a plot. The layout enhances user experience and provides a user-friendly interface for discovering new music.
 
+
+# Prerequisites
+
+This was tested in python versions 3.12.1 and 3.9.0
+
+This are the libraries saved in the "requirements.txt": (They shoudn't need any specific version)
+
+- PyQt6
+- pandas
+- matplotlib
+- numpy
+- scikit-learn
+- requests
 
 # Installation
 
@@ -27,7 +43,7 @@ git clone https://mygit.th-deg.de/lz24349/assistance-systems-recommendation-syst
 **Windows:**
 
 1. python -m venv musicRecommenderVenv
-2. windowsVenv\Scripts\activate.bat
+2. musicRecommenderVenv\Scripts\activate.bat
 3. pip install -r requirements.txt
 
 # Basic Usage
@@ -37,6 +53,37 @@ Start giving an input song and press the button "Get Song Data".
 Once the song data loads, adjust the parameters "Danceability, Tempo, Popularity and Energy" using the provided sliders.
 Subsequently after pressing the "Recommend" button, wait for some seconds and explore the recommended songs displayed in the table, accompanied by detailed information.
 Visualize the relationship between the input song and recommendations in the plot.
+
+
+
+# Implementation of the Requests
+
+!!!!!!!!! TODO: It describes what part of the code implements a request of the project.!!!!!!!!!
+
+Part 02 Requests
+Create a PyQt6 application that implements the following requests:
+• A Desktop App with PyQT6 has to be developed.
+• A requirements.txt file must be used to list the used Python modules.
+• A README.md file must be created with the structure described in part 01.
+• The module venv must be used.
+• A free data source must be used. You may find it for example at Kaggle, SciKit (but not the built-in
+ones), or other.
+• There must be a data import (predefined format and content of CSV).
+• The data must be read from a file after clicking on a (menu) button or directly after starting the app.
+• The data must be analyzed with Pandas methods, so that a user gets on overview.
+• You may use the functions dataframe.info(), dataframe.describe() and/or dataframe.corr()
+for that.
+• You may also use other metrics or diagrams to do this.
+• Create several input widgets (at least 3, where 2 must be different) that change some feature variables.
+• A Scikit training model algorithm (e.g. from Aurélien Géron, Chapter 4) must be applied.
+• Create 1 or 2 output canvas, i.e. for data visualization
+• At least 3 statistical metrics over the input data must be shown
+• The app must react interactively to the change of input parameter with a new prediction with visual-
+ization.
+
+
+
+
 
 # Work done
 
@@ -51,19 +98,6 @@ Leander Ziehm:
 4. Scikit-Learn
 
 Both: 7) General Python Programming.
-
-# requirements
-
-This are the libraries saved in the "requirements.txt":
-
-- PyQt6
-- pandas
-- matplotlib
-- numpy
-- scikit-learn
-- requests
-
-This was tested in python versions 3.12.1 and 3.9.0
 
 # Additional Descriptions
 
