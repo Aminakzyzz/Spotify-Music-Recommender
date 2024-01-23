@@ -6,9 +6,6 @@ Spotify Music Recommender
 
 https://mygit.th-deg.de/lz24349/assistance-systems-recommendation-system
 
-
-!!!!!!!!!!!! TODO PUT ACTUAL INFORMATION ON THE WIKI SO IT"S NOT SO EMPTY!!!!!!!!!!!!
-
 https://mygit.th-deg.de/lz24349/assistance-systems-recommendation-system/-/wikis/home
 
 # Project description
